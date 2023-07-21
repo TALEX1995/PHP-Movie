@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . '/models/movie.php';
+include_once __DIR__ . '/data/movies.php';
 ?>
 
 
@@ -14,7 +15,13 @@ include_once __DIR__ . '/models/movie.php';
 </head>
 
 <body>
-
+    <?php foreach ($movie_array as $movie) : ?>
+        <ul>
+            <?php foreach ($movie as $key => $data) : ?>
+                <li><strong><?= $key ?></strong> <?= $data ?></li>
+            <?php endforeach ?>
+        </ul>
+    <?php endforeach ?>
 </body>
 
 </html>

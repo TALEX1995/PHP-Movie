@@ -17,4 +17,13 @@ class Movie
         $this->year_of_release = $year_of_release;
         $this->vote = $vote;
     }
+
+    function isVoteValid()
+    {
+        if (($this->vote < 6) && ($this->vote > 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
