@@ -2,6 +2,8 @@
 
 include_once __DIR__ . '/models/movie.php';
 include_once __DIR__ . '/data/movies.php';
+include_once __DIR__ . '/data/actors.php';
+include_once __DIR__ . '/models/actor.php';
 ?>
 
 
@@ -18,7 +20,9 @@ include_once __DIR__ . '/data/movies.php';
     <?php foreach ($movie_array as $movie) : ?>
         <ul>
             <?php foreach ($movie as $key => $data) : ?>
-                <li><strong><?= $key ?></strong> <?= $data ?></li>
+                <?php if ($key != 'actors') : ?>
+                    <li><strong><?= $key ?></strong> <?= $data ?></li>
+                <?php endif ?>
             <?php endforeach ?>
         </ul>
     <?php endforeach ?>
