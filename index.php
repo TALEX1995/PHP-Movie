@@ -22,6 +22,10 @@ include_once __DIR__ . '/data/movies.php';
             <?php endforeach ?>
         </ul>
     <?php endforeach ?>
+
+    <?php foreach ($movie_array as $movie) : ?>
+        <p><?= $movie->getMovieInfo() ?></p>
+    <?php endforeach ?>
 </body>
 
 </html>

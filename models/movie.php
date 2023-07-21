@@ -18,12 +18,17 @@ class Movie
         $this->vote = $vote;
     }
 
-    function isVoteValid()
+    public function isVoteValid()
     {
         if (($this->vote < 6) && ($this->vote > 0)) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public function getMovieInfo()
+    {
+        return 'Nome Film: ' . $this->title . ' ' . 'Tipo: ' . $this->type . ' ' . 'Anno di uscita: ' . $this->year_of_release;
     }
 }
